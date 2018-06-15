@@ -14,7 +14,7 @@ app.get('/splashpage/:gameId', (req, res) => {
 
   axios.get(`http://localhost:3001/splashpage/${gameId}`)
     .then((data) => {
-      res.send(data.data[0]);
+      res.send(data.data);
     })
     .catch((err) => console.log('error 3001 proxy request', err));
 });
